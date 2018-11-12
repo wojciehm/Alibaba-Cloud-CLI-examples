@@ -1,0 +1,4 @@
+**ECS**
+One liner to get all images ID
+
+aliyun ecs --RegionId eu-central-1  DescribeInstanceTypes --output cols=InstanceTypeId,CpuCoreCount,MemorySize
