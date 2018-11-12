@@ -1,4 +1,4 @@
-**ECS**
+# ECS
 
 ## One liner to get all images ID sorted out by OS Name, Platorm, OS Type, Architecture and ImageID
 
