@@ -375,18 +375,26 @@ ecs.se1ne.22xlarge         | 88           | 704
 ```
 
 ### One liner to get list of instances with name, CPU, Memory, OS Name and Status
-`aliyun ecs DescribeInstances --output cols=ZoneId,InstanceName,Cpu,Memory,OSName,Status`  
+`aliyun ecs DescribeInstances --output cols=ZoneId,InstanceName,Cpu,Memory,OsName,InstanceId`
 
 ### Result
 
 ```bash
-ZoneId        | InstanceName     | Cpu | Memory | OSName            | Status
-------        | ------------     | --- | ------ | ------            | ------
-eu-central-1a | terraform        | 2   | 4096   | Ubuntu  16.04 64位 | Stopped
-eu-central-1a | def-vpc-sharing  | 2   | 2048   | Ubuntu  16.04 64位 | Stopped
-eu-central-1a | def-vpc-zabbix   | 2   | 4096   | Ubuntu  16.04 64位 | Stopped
-eu-central-1b | def-vpc-ansible  | 1   | 1024   | Ubuntu  16.04 64位 | Stopped
-eu-central-1a | def-vpc-vmw      | 1   | 2048   | Ubuntu  16.04 64位 | Running
-eu-central-1a | def-vpc-rt       | 2   | 4096   | Ubuntu  16.04 64位 | Running
-eu-central-1a | def-vpc-jumphost | 1   | 1024   | Ubuntu  16.04 64位 | Stopped
+ZoneId        | InstanceName     | Cpu | Memory | OsName | InstanceId
+------        | ------------     | --- | ------ | ------ | ----------
+eu-central-1a | terraform        | 2   | 4096   | <nil>  | i-gwxxxxxxxxxxxxxxxxxx
+eu-central-1a | def-vpc-sharing  | 2   | 2048   | <nil>  | i-gwxxxxxxxxxxxxxxxxxx
+eu-central-1a | def-vpc-zabbix   | 2   | 4096   | <nil>  | i-gwxxxxxxxxxxxxxxxxxx
+eu-central-1b | def-vpc-ansible  | 1   | 1024   | <nil>  | i-gwxxxxxxxxxxxxxxxxxx
+eu-central-1a | def-vpc-vmw      | 1   | 2048   | <nil>  | i-gwxxxxxxxxxxxxxxxxxx
+eu-central-1a | def-vpc-rt       | 2   | 4096   | <nil>  | i-gwxxxxxxxxxxxxxxxxxx
+eu-central-1a | def-vpc-jumphost | 1   | 1024   | <nil>  | i-gwxxxxxxxxxxxxxxxxxx
+```
+
+### One line to start ECS instance from command line
+
+`aliyun ecs StartInstance --InstanceId i-gwxxxxxxxxxxxxxxxxxx`
+
+```bash
+{"RequestId":"BAAC6C61-C207-4DE6-A976-XXXXXXXXX"}
 ```
