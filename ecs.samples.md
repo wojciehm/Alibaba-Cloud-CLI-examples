@@ -25,6 +25,8 @@ alinux_17_01_64_20G_cloudinit_20171222.vhd         | alinux_17_01_64_20G_cloudin
 
 `aliyun ecs DescribeImages --RegionId eu-central-1 --ImageOwnerAlias marketplace --output cols=ImageName,ImageId,Platform`
 
+### Result
+
 ```bash
 ImageName                                            | ImageId                | Platform
 ---------                                            | -------                | --------
@@ -43,6 +45,8 @@ Tomcat + Nginx + My SQL Stack Package on Ubuntu v1.1 | m-gw8dq50o59ikctae82pb | 
 ### One liner to get all ECS instance type in the configure region in your settings.
 
 `aliyun ecs DescribeInstanceTypes --output cols=InstanceTypeId,CpuCoreCount,MemorySize`
+
+### Result
 
 ```bash
 InstanceTypeId             | CpuCoreCount | MemorySize
