@@ -2,7 +2,7 @@
 
 ## One liner to get all images ID sorted out by OS Name, Platorm, OS Type, Architecture and ImageID
 
-aliyun ecs --RegionId eu-central-1  DescribeInstanceTypes --output cols=InstanceTypeId,CpuCoreCount,MemorySize
+aliyun ecs DescribeImages --RegionId eu-central-1 --ImageOwnerAlias system --output cols=ImageName,ImageId,Platform
 
 ## One liner to get images from Alibaba Cloud Marketplace
 
