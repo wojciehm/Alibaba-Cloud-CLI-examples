@@ -399,7 +399,7 @@ eu-central-1a | def-vpc-jumphost | 1   | 1024   | <nil>  | i-gwxxxxxxxxxxxxxxxxx
 {"RequestId":"BAAC6C61-C207-4DE6-A976-XXXXXXXXX"}
 ```
 
-### One liner to get list of instances with Hostnme and Network Interfaces
+### One liner to get list of instances with Hostname and Network Interfaces
 `aliyun ecs DescribeInstances --RegionId eu-central-1 --output cols=HostName,NetworkInterfaces`
 
 ### Result
