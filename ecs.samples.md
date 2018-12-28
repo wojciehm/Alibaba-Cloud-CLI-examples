@@ -398,3 +398,23 @@ eu-central-1a | def-vpc-jumphost | 1   | 1024   | <nil>  | i-gwxxxxxxxxxxxxxxxxx
 ```bash
 {"RequestId":"BAAC6C61-C207-4DE6-A976-XXXXXXXXX"}
 ```
+
+### One liner to get list of instances with Hostnme and Network Interfaces
+`aliyun ecs DescribeInstances --RegionId eu-central-1 --output cols=HostName,NetworkInterfaces`
+
+### Result
+
+```bash
+HostName                | NetworkInterfaces
+--------                | -----------------
+webserver002            | map[NetworkInterface:[map[MacAddress:00:16:3e:00:1b:04 PrimaryIpAddress:192.168.0.187 NetworkInterfaceId:eni-gw828kgsr9n4hjolv3pz]]]
+webserver001            | map[NetworkInterface:[map[MacAddress:00:16:3e:00:0a:37 PrimaryIpAddress:192.168.0.188 NetworkInterfaceId:eni-gw828kgsr9n4hjolv3py]]]
+webserver               | map[NetworkInterface:[map[MacAddress:00:16:3e:00:03:35 PrimaryIpAddress:192.168.0.170 NetworkInterfaceId:eni-gw84zq5fnih3qi37s2xu]]]
+webserver               | map[NetworkInterface:[map[MacAddress:00:16:3e:00:19:eb PrimaryIpAddress:192.168.0.168 NetworkInterfaceId:eni-gw8blruqz22mt8xzggw0]]]
+chmurowisko2            | map[NetworkInterface:[map[MacAddress:00:16:3e:01:76:12 PrimaryIpAddress:192.168.0.164 NetworkInterfaceId:eni-gw841i7u48pfqe3ezt84]]]
+chmurowisko             | map[NetworkInterface:[map[MacAddress:00:16:3e:01:79:be PrimaryIpAddress:192.168.0.163 NetworkInterfaceId:eni-gw841i7u48pfpog0j3ip]]]
+terraform               | map[NetworkInterface:[map[MacAddress:00:16:3e:01:6a:3e PrimaryIpAddress:172.25.18.46 NetworkInterfaceId:eni-gw8f9mvfddriihb0ye0c]]]
+sharing                 | map[NetworkInterface:[map[MacAddress:00:16:3e:01:28:f9 PrimaryIpAddress:172.25.18.35 NetworkInterfaceId:eni-gw89je7fi75h453d03jr]]]
+zabbix                  | map[NetworkInterface:[map[NetworkInterfaceId:eni-gw8acanqm4y46sao3lvq MacAddress:00:16:3e:01:22:c2 PrimaryIpAddress:172.25.18.31]]]
+iZgw8iej0t1njrejjajoyyZ | map[NetworkInterface:[map[MacAddress:00:16:3e:01:20:47 PrimaryIpAddress:172.25.62.57 NetworkInterfaceId:eni-gw8iej0t1njrejjhkwot]]]
+```
